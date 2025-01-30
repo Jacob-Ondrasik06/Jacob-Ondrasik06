@@ -1,0 +1,16 @@
+public class LibraryTest {
+    public static void main(String[] args) {
+        Book book1 = new Book("1984", "George Orwell", "123456789");
+        Book book2 = new Book("To Kill a Mockingbird", "Harper Lee", "987654321");
+
+        Patron patron = new Patron("Alice");
+
+        System.out.println("Borrowing book 1: " + patron.borrowBook(book1)); // true
+        System.out.println("Borrowing book 2: " + patron.borrowBook(book2)); // true
+        System.out.println("Patron details: " + patron);
+
+        System.out.println("Has borrowed book 1: " + patron.hasBorrowed("123456789")); // true
+        System.out.println("Returning book 1: " + patron.returnBook("123456789")); // true
+        System.out.println("Patron details after returning book 1: " + patron);
+    }
+}
