@@ -1,0 +1,4 @@
+public interface Gradebook {
+    public double calculateGrade();
+    public void add(Assignment assign);
+}
